@@ -5,6 +5,9 @@ import { MinimalistContent } from "@/components/MinimalistContent";
 import { AboutSection } from "@/components/AboutSection";
 import { ContactSection } from "@/components/ContactSection";
 import { useLanguage } from "@/components/LanguageContext";
+import { ViewCounter } from "@/components/ViewCounter";
+import { BackgroundMusic } from "@/components/BackgroundMusic";
+import { CatClicker } from "@/components/CatClicker";
 
 // Dynamic imports for client-side only components to avoid SSR issues
 const ThreeCat = dynamic(() => import("@/components/ThreeCat").then(mod => mod.ThreeCat), { 
@@ -55,6 +58,9 @@ export default function Home() {
       </nav>
 
       <main>
+        <BackgroundMusic />
+        <ViewCounter />
+        <CatClicker />
         {/* Hero Section */}
         <section className="relative h-screen flex flex-col items-center justify-center overflow-hidden">
           <div className="w-full max-w-5xl z-10">
